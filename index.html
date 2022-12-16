@@ -1,0 +1,449 @@
+<html>
+<meta charset='utf-8'>
+<head>
+<title>Ventana Modal con solo CSS</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script>
+$(function() {
+  
+  // Vars
+  var modBtn  = $('#modBtn'),
+      modal   = $('#modal'),
+      close   = modal.find('.close'),
+      modContent = modal.find('.modal-content');
+  
+  // open modal when click on open modal button 
+  modBtn.on('click', function() {
+    modal.css('display', 'block');
+    modContent.removeClass('modal-animated-out').addClass('modal-animated-in');
+  });
+  
+  // close modal when click on close button or somewhere out the modal content 
+  $(document).on('click', function(e) {
+    var target = $(e.target);
+    if(target.is(modal) || target.is(close)) {
+      modContent.removeClass('modal-animated-in').addClass('modal-animated-out').delay(300).queue(function(next) {
+        modal.css('display', 'none');
+        next();
+      });
+    }
+  });
+  
+});
+
+    </script>
+
+<style>
+  
+html,body{ 
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif, Baloo Bhaina, cursive;
+    margin: 0;
+    background-color: #000;
+    height: auto;
+    width: 100%;
+  
+  }
+
+  
+  .div_centrado{
+        background: red;
+        width: auto;       
+        height: auto;
+        position: absolute;
+        font-size: 0.90em;
+        color: #CCCCCC;
+        top:0;
+        left: 50%;           
+        margin-top: 0;
+        margin-left: -100px;
+    }
+
+.boton_temporada{
+    height: auto;
+    width: 40%;
+    text-decoration: none;
+    padding: 1%;
+    margin-top: 0.2em;
+    margin-bottom: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-weight: 900;
+    font-size: 1.1em;
+    color: #000000;
+    float: center;
+    position: absolte;
+    background-color: #74EAFF;
+    border-radius: 6px;
+    border: 3px solid #ffffff;}
+
+
+  
+
+
+
+
+  
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  width: 80%;
+  height: 50%;
+  position: center;
+}
+
+
+
+h1 {
+  display: block;
+  font-size: 1.99em;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+  
+h2 {
+
+  color: #74EAFF;
+  text-align:center;
+}
+
+
+h3 {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align:center;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+
+a:link {
+   text-decoration: none;
+   color:#FFFFFF;}
+
+a:visited {
+   color:#FFFFFF;}
+a:active {
+   color:#FFFFFF;}
+a:hover {
+   color:#FFFFFF;}
+
+
+li, a {
+  line-height: 2.7;
+  font-weight: bold;
+  font-size: 1.1em;
+  }
+
+.fcc-btn {
+  font-family: Vegur, 'PT Sans', Verdana, sans-serif, Baloo Bhaina, cursive;
+  height: auto;
+  width: 40%;
+  margin: 0 auto;
+  background-color: #F00000;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.fcc-btn:hover {
+  background-color: #222;
+}
+
+	#popup {
+		background-color: rgba(0,0,0,0.8);
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:0;
+		-webkit-animation:autopopup 2s;
+		-moz-animation:autopopup 2s;
+		animation:autopopup 2s;
+	}
+		@-webkit-keyframes autopopup {
+			from {opacity: 0;margin-top:-200px;}
+			to {opacity: 1;}
+		}
+		@-moz-keyframes autopopup {
+			from {opacity: 0;margin-top:-200px;}
+			to {opacity: 1;}
+		}
+		@keyframes autopopup {
+			from {opacity: 0;margin-top:-200px;}
+			to {opacity: 1;}
+		}
+
+	#popup:target {
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 1s;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.popup-contenedor {
+		position: relative;
+		margin: 5% auto;
+		padding:30px 30px;
+		background-color: #222;
+		color:#FFFFFF;
+    text-align: center;
+    border: 3px solid #ffffff;
+		border-radius: 3px;
+		width:65%;
+	}
+
+	a.popup-cerrar {
+	background: #f00;
+  border-radius:3px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 999;
+  line-height: 28px;
+  position: absolute;
+  right: 5px;   
+  text-align: center;
+  text-decoration: none;
+  top: 5px;
+  width: 22px;
+ }
+  
+  
+  
+  
+.wrapper {
+  font-family: Vegur, 'PT Sans', Verdana, sans-serif, Baloo Bhaina, cursive;
+  text-align: center;
+}
+.wrapper h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.wrapper p {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Modal button */
+.modal-btn {
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  background-color: #F00000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.1em;
+  transition: all .3s;
+}
+.modal-btn:hover {
+  background-color: #d25729;
+}
+
+/* Modal */
+.modal {
+  background-color: rgba(0,0,0,.65);
+  display: none;
+  overflow: auto;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  top: 0px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #222;
+  //background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 6px;
+  border: 3px solid #FFFFFF;}
+}
+.modal-animated-in {
+  animation: totop-in .3s ease;
+}
+.modal-animated-out {
+  animation: totop-out .3s ease forwards;
+}
+.modal-header {
+  background-color: #222;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 0;
+}
+.modal-content .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2% 2%;
+  background-color: #F00000;
+  width: 25px;
+  height: 25px;
+  color: #FFFFFF;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s;
+}
+.modal-content .close:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 0 20px;
+}
+.modal-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.modal-body ul li {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+  color: #000000;
+}
+
+.modal-body ul li::before {
+  position: absolute;
+  content: '\f058';
+  color: #74EAFF;
+  left: 15%;
+  top: 20px;
+  display: inline-block;
+  font: normal normal normal 17px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Modal Footer */
+.modal-footer {
+  background-color: #222;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 0;
+}
+.modal-header h3,
+.modal-footer h3 {
+  color: #222;/* Oculto */
+}
+
+/* Keyframes */
+@keyframes totop-in {
+  0% {
+    top: 600px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }  
+}
+
+@keyframes totop-out {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+  }  
+}
+
+	
+</style>	
+
+</head>
+<body>
+
+<div class="wrapper">
+<h1>Interland</h1>
+
+
+<img src="https://raw.githubusercontent.com/Sherpa47/Imagenes/main/Interland/interlandcreator.jpg">
+
+  <!-- Modal button -->
+  <button id="modBtn" class="modal-btn">JUGAR</button>
+</div>  
+
+    <div class="modal-wrapper" id="popup">
+		<div class="popup-contenedor">
+			
+			<h2>Visita nuestra web</h2>
+			<p>Entra en nuestra web y descubre nuevos juegos y aplicaciones gratuitas para tus dispositivos Android. ¿A que esperas? entra ya.</p>
+
+<div><a class="fcc-btn" href="https://sherpa47.github.io/Prueba/">Entrar</a></div>
+			
+	<a class="popup-cerrar" href="#popup">x</a>
+
+			
+		</div>
+  	</div>  
+
+
+<!-- Modal -->
+  
+<div id="modal" class="modal">
+  <!-- Modal Content -->
+  <div class="modal-content">
+
+    <!-- Modal Header -->
+    
+    <div class="modal-header">
+      <h2 class="header-title">Selecciona idioma</h2>
+      <div class="close fa fa-close"></div>  
+    </div>
+    
+    <!-- Modal Body -->
+    
+    <div class="modal-body">
+      <ul>
+        <li><a class="icono españa"
+href="https://beinternetawesome.withgoogle.com/es-419_all/interland">🇪🇸 - Español</a></li>
+<li><a class="icono españa" href="https://beinternetawesome.withgoogle.com/en_us/interland">🇬🇧 - Ingles</a></li>
+        <li><a class="icono españa" href="https://beinternetawesome.withgoogle.com/it_it/interland">🇮🇹 - Italiano</a></li>
+        <li><a class="icono españa" href="https://beinternetawesome.withgoogle.com/fr_all/interland">🇫🇷 - Frances</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-footer">
+      <h3>Footer</h3>     
+    </div>
+			
+  </div>
+</div>
+
+
+</body>
+
+
+</html>
