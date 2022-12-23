@@ -20,47 +20,41 @@
 
 .filterDiv {
   float: center;
-  width: 80%;
-  height: auto;
+  width: 100%;
+  height: 20%;
   text-align: center;
-  margin: 0;
-  display: inline;}
+  margin: 0 auto;}
 
-.show {
-  display: block;}
-
-.container {
-  width: 80%;
+.padre {
+  width: 70%;
   height: auto;
-  margin-top: 55px;
-  margin: 0 auto;
+  margin-top: 15em;
+  margin: 0% auto;
   overflow: visible;
-  border: 4px solid #222222;
-  background-color: #26272b;}
-	
+  border: 4px solid #000000;
+  background-color: #000000;}
 	
 .img_caratula{
     border: 4px solid #000000;
     width: 100%;
     height: 10%;}
   
-  
  .logo {
-    float: left;
-    width: 100%;
-    height: 50px;
-    background-color: #000000; /* Black */
-    background-size: 15% 100%;
+    float: center;
+    width: 80%;
+    height: auto;
+    background-color: #26272b; /* Black */
+    background-size: 25% 100%;
     background-repeat: no-repeat;
     background-position: left;
-    border: 4px solid #222;
+    border: 4px solid #666666;
     color: #000000;
     padding: 0;
-    margin: 4% 0;
+    margin: 2% 10% 3% 10%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     top: 0;
     right: 0;
@@ -75,96 +69,82 @@
 
 p{
   display: block;
-  font-size: 1.1em;
+  font-size: 0.9em;
   text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: 0.3em;
-  margin-right: 0.3em;
   font-weight: bold;
   color: #FFFFFF;
 }
   
  h1 {
   display: block;
-  font-size: 1.4em;
+  font-size: 0.8em;
   text-align: center;
   margin-top: 0.3em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.9em;
   margin-left: 0.3em;
   margin-right: 0.3em;
   font-weight: bold;
   color: #FFFFFF;
 } 
   
-
- a:link {
-   text-decoration: none;
-   color:#FFFFFF;}
-
-a:visited {
-   color:#FFFFFF;}
-a:active {
-   color:#FFFFFF;}
-a:hover {
-   color:#FFFFFF;}
   
-li, a {
-  line-height: 2.7;
-  font-weight: bold;
-  font-size: 1.1em;
-  }
-  
-  
- .label {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: #26272b;
-  border: 0px solid #0fffff;}
+hr.barra1 {
+ height: 30px;
+ border-style: solid;
+ border-color: #BFBFBF;
+ border-width: 2px 0 0 0;
+ border-radius: 20px;
+ text-align: center;
 }
+  
+hr.barra2 {
+ height: 30px;
+ border-style: solid;
+ border-color: #BFBFBF;
+ border-width: 0 0 2px 0;
+ border-radius: 20px;
+ text-align: center;
+}  
 
 </style>
 </head>
 
 <body>
 
+<div class="padre">
 
-
-<div class="container">
+<hr class="barra1">
   
-<h1>Selecciona Idioma</h1>
-  
-
+<h1>SELECCIONA IDIOMA</h1>
   
 <div class="filterDiv">
 <a href="https://www.google.com/logos/2021/halloween21/r1030_5e329/halloween21.html?hl=es&sdoodles=1" class="logo canal_1">
-<span>Español</span></a>
+<p>Español</p></a>
 </div>
 
 <div class="filterDiv">
 <a href="https://www.google.com/logos/2021/halloween21/r1030_5e329/halloween21.html?hl=en&sdoodles=1" class="logo canal_2">
-<span>Ingles</span></a>
+<p>Ingles</p></a>
 </div>
 
 <div class="filterDiv">
 <a href="https://www.google.com/logos/2021/halloween21/r1030_5e329/halloween21.html?hl=it&sdoodles=1" class="logo canal_3">
-<span>Italiano</span></a>
+<p>Italiano</p></a>
 </div>
 
 <div class="filterDiv">
 <a href="https://www.google.com/logos/2021/halloween21/r1030_5e329/halloween21.html?hl=fr&sdoodles=1" class="logo canal_4">
-<span>Frances</span></a>
+<p>Francés</p></a>
 </div>
 
 <div class="filterDiv">
 <a href="https://www.google.com/logos/2021/halloween21/r1030_5e329/halloween21.html?hl=de&sdoodles=1" class="logo canal_5">
-<span>Alemán</span></a>
+<p>Alemán</p></a>
 </div>
   
-</div>
+<hr class="barra2">
 
+</div>
 
 </body>
 
